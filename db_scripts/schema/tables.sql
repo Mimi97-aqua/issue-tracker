@@ -7,6 +7,7 @@ create table issues (
     id serial primary key not null,
     title varchar(255) not null,
     details text,
+    issue_code varchar(100) unique not null,
     start_date timestamp with time zone,
     due_date timestamp with time zone,
     created_by_id uuid references members(id),
