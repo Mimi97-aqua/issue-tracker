@@ -175,6 +175,7 @@ begin
     end if;
 
     if new.title is distinct from old.title
+       or new.project_code is distinct from old.project_code
        or new.description is distinct from old.description
        then new.updated_at = now();
     end if;

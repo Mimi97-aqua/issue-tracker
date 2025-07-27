@@ -88,6 +88,8 @@ comment on table public.projects is 'All issues exist under projects. Contains i
         comment on column projects.id is 'Project ID. Auto-increments from 1000.'
         comment on column projects.title is 'Short project description';
         comment on column projects.description is 'Long project description';
+        comment on column projects.project_code is 'Code that uniquely identifies the project. Used for generating' ||
+                'issue codes for issues that fall under the given project.';
         comment on column projects.is_active is 'Soft delete flag';
         comment on column projects.created_by_id is 'Who created the project. NOTE: only admin and super admin.';
         comment on column projects.modified_by_id is 'Who last updated the project. NOTE: same rule applies as for creation';

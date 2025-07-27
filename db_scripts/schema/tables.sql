@@ -98,6 +98,7 @@ create table projects (
     id serial primary key,
     title varchar(255) unique not null,
     description text,
+    project_code varchar(100) unique not null,
     is_active boolean not null default true,
     created_by_id uuid references members(id),
     modified_by_id uuid references members(id),
