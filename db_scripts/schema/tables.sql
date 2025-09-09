@@ -14,7 +14,7 @@ create table issues (
     modified_by_id uuid references members(id),
     assignee_id uuid references members(id),
     team_id integer references teams(id),
-    type_id varchar not null references issue_types(id),
+    type_id integer not null references issue_types(id),
     status_id integer not null references statuses(id),
     project_id integer not null references projects(id),
     is_active boolean default true,
@@ -22,8 +22,6 @@ create table issues (
     updated_at timestamp with time zone,
     deleted_at timestamp with time zone,
     deleted_by_id uuid references members(id)
-
-    unique (title, md5(details))
 );
 
 -- members table

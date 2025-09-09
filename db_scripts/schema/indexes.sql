@@ -13,6 +13,7 @@ create index idx_issues_created_by on issues(created_by_id);
 create index idx_issues_modified_by on issues(modified_by_id);
 create index idx_issue_types_creator on issue_types(created_by_id);
 create index idx_statuses_creator on statuses(created_by_id);
+create unique index issues_title_details_md5_idx on issues (title, md5(details));
 
 -- Projects | Teams
 create index idx_projects_is_active on projects(is_active);
