@@ -3,9 +3,9 @@ create extension if not exists "pgcrypto";
 
 -- members
 insert into members (first_name, last_name, email, role, permission, password_hash) values
-('mbango', 'likenye', 'mbango@tech.cm', 'senior developer', 'admin', crypt('password123', gen_salt('bf', 12))),
-('njoke', 'mokube', 'njoke@tech.cm', 'project manager', 'super-admin', crypt('password123', gen_salt('bf', 12))),
-('liombe', 'ekane', 'liombe@tech.cm', 'qa engineer', 'user', crypt('password123', gen_salt('bf', 12)));
+('Mbango', 'Likenye', 'mbango@tech.cm', 'senior developer', 'admin', crypt('password123', gen_salt('bf', 12))),
+('Njoke', 'Mokube', 'njoke@tech.cm', 'project manager', 'super-admin', crypt('password123', gen_salt('bf', 12))),
+('Liombe', 'Ekane', 'liombe@tech.cm', 'qa engineer', 'user', crypt('password123', gen_salt('bf', 12)));
 
 -- projects
 insert into projects (title, description, created_by_id) values
